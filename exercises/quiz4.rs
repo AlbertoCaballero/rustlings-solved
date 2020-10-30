@@ -7,6 +7,14 @@
 
 // I AM NOT DONE
 
+macro_rules! my_macro {
+    ($e:tt) => {
+        write!("Hello {}", stringify!($e))
+    };
+
+    () => { println!("Else Macro!"); };
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
